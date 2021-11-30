@@ -55,6 +55,17 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>3.0.3</version>
+				<configuration>
+				  	<appName>bitan_rest_api</appName>
+					<processTypes>
+					     <web>java $JAVA_OPTS -cp target/classes:target/dependency/*.jar</web>
+					</processTypes>
+				</configuration>
+		      </plugin>
 		</plugins>
 	</build>
 
